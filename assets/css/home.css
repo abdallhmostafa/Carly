@@ -3,31 +3,20 @@
     --text-color: #000000;
     --button-color: #256BF3;
     --footer-color: #232323;
-    --backgrouned-color: #F5F5F5;
+    --backgrouned-color: white;
     --logo-font: 'Dancing Script', cursive;
     --main-font: 'Inter', sans-serif;
-
 }
-
 
 /* End variables */
 
-/* Start Component */
-
-
-
-/* End Component */
-
-/*  Start Globa Rules */
-
+/* Global Rules */
 * {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    scroll-behavior: smooth;
-
 }
 
 html {
@@ -35,14 +24,15 @@ html {
 }
 
 body {
-    background-color: var(--backgrouned-color);
     font-family: 'Inter', sans-serif;
-    scroll-behavior: smooth;
 }
 
 ul {
     list-style: none;
+}
 
+a {
+    text-decoration: none;
 }
 
 .container {
@@ -52,24 +42,10 @@ ul {
     margin-right: auto;
 }
 
-input[type="submit"] {
-    cursor: pointer;
-}
-
-/* @media (max-width:450px),
-(min-width:300px) {
-    .container {
-        width: 740px;
-    }
-
-
-} */
-
 @media (min-width:768px) {
     .container {
         width: 750px;
     }
-
 }
 
 @media (min-width:992px) {
@@ -83,6 +59,8 @@ input[type="submit"] {
         width: 1170px;
     }
 }
+
+/* Global Rules */
 /*================ Start Navbar======================= */
 .container .nav {
     display: flex;
@@ -138,24 +116,180 @@ input[type="submit"] {
 }
 
 /* =============== End Navbar =========================*/
+/* ==============Start landing========================== */
+.landing {
+    background-color: #F1F6FF;
+    display: flex;
+    justify-content: space-between;
+}
 
+.landing .landing-left {
+    display: flex;
+    flex-direction: column;
+}
 
+.landing .landing-left h1 {
+    font-style: italic;
+    font-weight: 500;
+    font-size: 60px;
+    padding-left: 40px;
+}
 
+.landing .landing-left h1 span {
+    color: blue;
+}
 
+.landing .landing-left p {
+    margin-left: 40px;
+    color: #615F5F;
+}
 
+.landing .landing-right img {
+    max-width: 100%;
+    width: 600px;
+}
+@media(max-width: 992px) {
+    .landing {
+        flex-direction: column;
+    }
+    .landing .landing-left {
+        text-align: center;
+    }
+    .landing .landing-right img {
+        width: 100%;
+    }
+}
+@media(max-width: 767px) {
+    .landing .landing-left h1 {
+        font-size: 40px;
+        padding-left: 0;
+    }
+    .landing .landing-left p {
+        margin-left: 0;
+    }
+}
+
+/* ==============End landing========================== */
+/* ==================search section================= */
+.search {
+    background-color: #f1f6ff;
+    width: 510px;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+.search .text {
+    font-weight: 400;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.search .search-input input[type="search"] {
+    border: none;
+    width: 327px;
+    height: 40px;
+    background: #E7E7E7;
+}
+
+.search .search-input input[type="submit"] {
+    background-color: var(--button-color);
+    color: white;
+    border: none;
+    padding: 7px 10px;
+    margin-left: 30px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+@media(max-width: 767px) {
+    .search {
+        width: fit-content;
+    }
+    .search .search-input input[type="submit"] {
+        margin: 10px 127px;
+    }
+}
+
+/* ==================search section================= */
+/* =====================about us======================= */
+.about {
+    padding: 50px;
+    display: flex;
+    background-color: #f1f6ff;
+    justify-content: space-evenly;
+}
+
+.about .left img {
+    height: 450px;
+}
+
+.about .right .f1 {
+    color: #808080;
+    margin-bottom: 20px;
+}
+
+.about .right .f2 {
+    margin-bottom: 20px;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.about .right .f3 {
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+@media(max-width: 992px) {
+    .about{
+        flex-direction: column;
+    }
+    .about .left img {
+        width: 100%;
+    }
+    .about .right {
+        padding-top: 50px;
+        text-align: center;
+    }
+}
+
+/* =====================about us======================= */
+/* ==============rent deals================= */
+.container .rent-deals {
+    display: flex;
+    flex-direction: column;
+}
+
+.container .rent-deals .label {
+    text-align: center;
+}
+
+.container .rent-deals .label p {
+    font-size: 18px;
+    font-weight: 200;
+    color: rgb(0 0 0 / 50%);
+    margin: 20px 0;
+}
+
+.container .rent-deals .label h2 {
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.container .rent-deals .show-all {
+    margin: 40px auto;
+    border: 1px solid black;
+    width: fit-content;
+    padding: 10px 20px;
+    border-radius: 20px;
+
+}
+
+.container .rent-deals .show-all a {
+    color: black;
+    margin-right: 10px;
+}
 /* < !--======================= Start Car Section =========================--> */
 .car {
     padding-top: 60px;
     padding-bottom: 60px;
-}
-
-.car .container h2 {
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 30px;
-    letter-spacing: 0em;
-    text-align: center;
-    margin-bottom: 30px;
 }
 
 .car .container .cars {
@@ -325,227 +459,14 @@ input[type="submit"] {
 @media (min-width:1370px) {
     .car .container {
         width: 1300px;
+        margin-left: -85px;
     }
 }
 
 /* < !--======================= End Car Section =========================--> */
 
 
-/* < !--======================= Start book Section=========================--> */
-.book {
-    padding-top: 60px;
-    padding-bottom: 60px;
-    background-color: #0000FF;
-}
-
-.book .container .text {
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 109.52%;
-    color: white;
-    margin-bottom: 30px;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-}
-
-.book .container form {
-    background-color: #F1F6FF;
-    margin: 0 auto;
-    display: block;
-    color: #000000;
-    /* padding-bottom: 50px; */
-    overflow: hidden;
-}
-
-.book .container form .form-1 {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    padding: 30px 60px;
-    column-gap: 60px;
-    /* flex-wrap: wrap; */
-    /* justify-content: space-between; */
-}
-
-.book .container form .form-1 .box {
-    flex-basis: 40%;
-}
-
-.book .container form .form-1 .box select::-ms-expand {
-    display: none;
-}
-
-.book .container form .form-1 .box .sle {
-    position: relative;
-}
-
-.book .container form .form-1 .box .sle select {
-    border: none;
-    text-transform: capitalize;
-    background-color: #FFFDFD;
-    padding: 10px 20px;
-    margin-bottom: 20px;
-    width: 100%;
-    border-radius: 5px;
-    cursor: pointer;
-    appearance: none;
-}
-
-.book .container form .form-1 .box .sle select option {
-
-    background-color: white;
-    margin-bottom: 1px;
-    cursor: pointer;
-    padding: 0.5em;
-    border-width: 0
-}
-
-.book .container form .form-1 .box .sle::after {
-    content: "\25BC";
-    position: absolute;
-    border-radius: 5px;
-    padding: 0px 15px;
-    color: #D9D9D9;
-    /* background-color: #D9D9D9; */
-    right: 0;
-    top: 0;
-    font-size: 30px;
-    cursor: pointer;
-    pointer-events: none;
-    transition: 0.3s all ease;
-}
-
-/* .book .container form .form-1 .box .sle:hover::after {
-    /* color: #0000FF; */
-    /* background-color: #FFFDFD; */
-
-.book .container form .form-1 .box label {
-    display: block;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 109.52%;
-    margin-bottom: 10px;
-    margin-left: 5px;
-}
-
-.book .container form .form-1 .box input {
-    border: none;
-    background-color: #FFFDFD;
-    padding: 10px 20px;
-    margin-bottom: 20px;
-    width: 100%;
-    border-radius: 5px;
-}
-
-.book .container form .form-1 .box:last-child input {
-    width: 213%;
-    /* grid-template-columns: 1fr;   */
-}
-
-.book .container form .form-2 {
-    display: flex;
-    padding: 0px 60px;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.book .container form .form-2 .box {
-    flex-basis: 25%;
-}
-
-.book .container form .form-2 .box:last-child {
-    flex-basis: 45%;
-}
-
-.book .container form .form-2 .box label {
-    display: block;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 109.52%;
-    margin-bottom: 10px;
-    margin-left: 5px;
-}
-
-.book .container form .form-2 .box input {
-    border: none;
-    background-color: #FFFDFD;
-    padding: 10px 20px;
-    margin-bottom: 20px;
-    width: 100%;
-    border-radius: 5px;
-}
-
-.book .container form .form-2 .box input[type="submit"] {
-    background-color: #0000FF;
-    color: white;
-    position: relative;
-    top: 13px;
-    font-weight: 700;
-}
-
-
-
-@media (max-width:991px) {
-    .book .container form .form-2 .box {
-        flex-basis: 45%;
-    }
-
-    .book .container form .form-1 .box:last-child input {
-        width: 223%;
-        /* grid-template-columns: 1fr;   */
-    }
-
-    .book .container form .form-2 .box:last-child {
-        flex-basis: 90%;
-        margin: 0 auto;
-        /* justify-content: center; */
-    }
-}
-
-@media (max-width:768px) {
-    .book .container form .form-1 {
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    .book .container form .form-1 .box:last-child input {
-        width: 100%;
-        /* grid-template-columns: 1fr;   */
-    }
-}
-
-@media (min-width:768px) {
-    .car .container {
-        width: 750px;
-    }
-
-}
-
-@media (min-width:992px) {
-    .car .container {
-        width: 970px;
-    }
-}
-
-@media (min-width:1200px) {
-    .car .container {
-        width: 1170px;
-    }
-}
-
-@media (min-width:1370px) {
-    .car .container {
-        width: 1300px;
-    }
-}
-
-/* < !--======================= End book Section=========================--> */
+/* ==============rent deals================= */
 /* =================footer====================== */
 .footer {
     background-color: #232323;
@@ -606,3 +527,7 @@ input[type="submit"] {
 }
 
 /* =================footer====================== */
+
+/* ===================cars========== */
+
+/* ===================cars========== */
